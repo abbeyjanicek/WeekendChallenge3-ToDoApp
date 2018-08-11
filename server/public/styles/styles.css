@@ -1,1 +1,27 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+}
 
+.header {
+    text-align: center;
+    background-color: red;
+    height: 100px;
+    vertical-align: middle;
+    position: fixed;
+    width: 100%;
+}
+.footer{
+    text-align: center;
+    background-color: red;
+    height: 100px;
+    vertical-align: middle;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a[href^="mailto:"]{ 
+    font-family: Tahoma, Geneva, sans-serif;
+    color: white;
+  }
