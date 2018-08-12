@@ -22,6 +22,7 @@ List technologies and frameworks here
 
 ## Getting Started
 [x]  Install node/express, spin up server.
+[]  Set up Mongo/Mongoose.
 
 CLIENT: HTML:
 [x]  Create a header.

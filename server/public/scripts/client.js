@@ -14,7 +14,7 @@ toDoApp.controller('TaskController', function ($http) {
             url:'/tasks',
             data: newTask
         }).then(function(response){
-            console.log('received the new task', response.data); //<---- not working atm
+            console.log('received the new task', response.data);
         }).catch(function(error){
             alert('unable to add new task')
             console.log(error);            
