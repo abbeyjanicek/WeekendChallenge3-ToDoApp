@@ -11,67 +11,71 @@
     <script src="scripts/client.js"></script>
 </head>
 
-<body>
-    <div class="header">
-        <h1>let's do this!</h1>
-    </div>
-    <div class="content">
-        <div id="input form">
-            <form>
-                <input type="text" placeholder="enter new task here">
-                <select id="whenToSchedule">
-                    <option value="">---please select---</option>
-                    <option value="now">today</option>
-                    <option value="later">future</option>
-                </select>
-                <button>create!</button>
-            </form>
+<body ng-app="toDoApp">
+    <div class="container" ng-controller="TaskController as tc">
+        <div class="header">
+            <h1>let's do this!</h1>
         </div>
-        <div class="table">
-            <table id="today">
-                <h3>today</h3>
-                <thead>
-                    <tr>
-                        <th>complete task</th>
-                        <th>task description</th>
-                        <th>delete task</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="checkbox" name="completeTask" value="true">complete task</td>
-                        <td></td>
-                        <td><button>delete task</button></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="content">
+            <div id="input form">
+                <form ng-submit="tc.sendTask()">
+                    <input type="text" placeholder="enter new task here">
+                    <select id="whenToSchedule">
+                        <option value="">---please select---</option>
+                        <option value="now">today</option>
+                        <option value="later">future</option>
+                    </select>
+                    <button>create!</button>
+                </form>
+            </div>
+            <div class="table">
+                <table id="today">
+                    <h3>today</h3>
+                    <thead>
+                        <tr>
+                            <th>complete task</th>
+                            <th>task description</th>
+                            <th>delete task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="completeTask" value="true">complete task</td>
+                            <td>task goes here</td>
+                            <td><button>delete task</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <table id="future">
+                    <h3>future</h3>
+                    <thead>
+                        <tr>
+                            <th>move task</th>
+                            <th>task description</th>
+                            <th>delete task</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="moveTask" value="true">move task</td>
+                            <td>task goes here</td>
+                            <td><button>delete task</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="table">
-            <table id="future">
-                <h3>future</h3>
-                <thead>
-                    <tr>
-                        <th>move task</th>
-                        <th>task description</th>
-                        <th>delete task</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="checkbox" name="moveTask" value="true">move task</td>
-                    <td></td>
-                    <td><button>delete task</button></td>
-                </tr>
-            </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="footer">
-        <p>&copy Abbey Janicek</p>
-        <div class="email">
-            <p>Email:
-                <a href="mailto:abbey.janicek@gmail.com ">abbey.janicek@gmail.com</a>
-            </p>
+        <div class="footer">
+            <p>&copy abbey janicek</p>
+            <div class="email">
+                <p>email:
+                    <a href="mailto:abbey.janicek@gmail.com ">abbey.janicek@gmail.com</a>
+                </p>
+            </div>
         </div>
     </div>
 </body>

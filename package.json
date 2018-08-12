@@ -1,0 +1,23 @@
+{
+  "name": "weekendchallenge3-todoapp",
+  "version": "1.0.0",
+  "description": "One Paragraph of project description goes here. Link to the live version of the app if it's hosted on Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbeyjanicek/WeekendChallenge3-ToDoApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abbeyjanicek/WeekendChallenge3-ToDoApp/issues"
+  },
+  "homepage": "https://github.com/abbeyjanicek/WeekendChallenge3-ToDoApp#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

@@ -28,6 +28,13 @@ HTML:
     [x]  text: "task"
     [x]  button: "delete"
 
+ANGULARJS:
+[x]  set up app
+[x]  set up controller
+[]  ng-submit: form
+[]  ng-model: input, select
+[]  ng-click: delete buttons
+[]  ng-repeat: tr of tbody
 
 -When the task is created, it should be stored inside of a database (MongoDB)
 -Whenever a task is created the front end should refresh to show all tasks that need to be completed.
