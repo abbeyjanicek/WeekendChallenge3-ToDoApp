@@ -12,9 +12,9 @@ Using AngularJS, create a front end experience that allows a user to create a ta
 HTML:
 [x]  Create a header.
 [x]  Create a footer.
-[]  Input field: "enter new task here"
-[]  Dropdown menu: Today, Future
-[]  Button: "let's do this!"
+[x]  Input field: "enter new task here"
+[x]  Dropdown menu: Today, Future
+[x]  Button: "let's do this!"
 []  Table 1: 
     []  label: "Today" 
     []  3 TH: "completed", "task", "delete";

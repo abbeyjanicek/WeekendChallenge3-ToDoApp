@@ -8,9 +8,10 @@ body{
     background-color: red;
     height: 100px;
     vertical-align: middle;
-    position: fixed;
     width: 100%;
 }
+
+
 .footer{
     text-align: center;
     background-color: red;
