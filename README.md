@@ -15,18 +15,18 @@ HTML:
 [x]  Input field: "enter new task here"
 [x]  Dropdown menu: Today, Future
 [x]  Button: "let's do this!"
-[]  Table 1: 
-    []  label: "Today" 
-    []  3 TH: "completed", "task", "delete";
-    []  checkbox: "completed"
-    []  text: "task"
-    []  button: "delete"
-[]  Table 2:
-    []  label: "Future"
-    []  3 TH: "move", "task", "delete";
-    [?] button: "move"
-    []  text: "task"
-    []  button: "delete"
+[x]  Table 1: 
+    [x]  heading: "Today" 
+    [x]  3 TH: "completed", "task", "delete";
+    [x]  checkbox: "completed"
+    [x]  text: "task"
+    [x]  button: "delete"
+[x]  Table 2:
+    [x]  headin: "Future"
+    [x]  3 TH: "move", "task", "delete";
+    [?]  button: "move"
+    [x]  text: "task"
+    [x]  button: "delete"
 
 
 -When the task is created, it should be stored inside of a database (MongoDB)

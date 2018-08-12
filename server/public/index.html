@@ -16,34 +16,54 @@
         <h1>let's do this!</h1>
     </div>
     <div class="content">
-        <div id="input field">
-            <input type="text" placeholder="enter new task here">
-            <select name="when"></select>
-            <button>create!</button>
+        <div id="input form">
+            <form>
+                <input type="text" placeholder="enter new task here">
+                <select id="whenToSchedule">
+                    <option value="">---please select---</option>
+                    <option value="now">today</option>
+                    <option value="later">future</option>
+                </select>
+                <button>create!</button>
+            </form>
         </div>
         <div class="table">
-            <table label="today:">
-                <th>complete task</th>
-                <th>task description</th>
-                <th>delete task</th>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+            <table id="today">
+                <h3>today</h3>
+                <thead>
+                    <tr>
+                        <th>complete task</th>
+                        <th>task description</th>
+                        <th>delete task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="completeTask" value="true">complete task</td>
+                        <td></td>
+                        <td><button>delete task</button></td>
+                    </tr>
+                </tbody>
             </table>
-
         </div>
         <div class="table">
-            <table label="future:">
-                <th>move task</th>
-                <th>task description</th>
-                <th>delete task</th>
+            <table id="future">
+                <h3>future</h3>
+                <thead>
+                    <tr>
+                        <th>move task</th>
+                        <th>task description</th>
+                        <th>delete task</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
+                    <td><input type="checkbox" name="moveTask" value="true">move task</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><button>delete task</button></td>
                 </tr>
+            </tbody>
+            </table>
         </div>
     </div>
     <div class="footer">
@@ -53,7 +73,7 @@
                 <a href="mailto:abbey.janicek@gmail.com ">abbey.janicek@gmail.com</a>
             </p>
         </div>
-
+    </div>
 </body>
 
 </html>
