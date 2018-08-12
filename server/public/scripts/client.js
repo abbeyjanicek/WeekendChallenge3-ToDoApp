@@ -7,28 +7,31 @@ toDoApp.controller('TaskController', function ($http) {
     vm.sendTask = function () {
         let newTask = {
             task: vm.taskIn,
+            task_completed: vm.taskCompleted
         }
         console.log(newTask);
         $http({
             method: 'POST',
-            url:'/tasks',
+            url: '/tasks',
             data: newTask
-        }).then(function(response){
+        }).then(function (response) {
             console.log('received the new task', response.data);
-        }).catch(function(error){
+        }).catch(function (error) {
             alert('unable to add new task')
-            console.log(error);            
+            console.log(error);
         })
     }
 
-
-
-
-
-
-
-
-
-
-
+    function getTasks() {
+        $http({
+            method: 'GET',
+            url: '/tasks'
+        }).then(function (response) {
+            console.log('back from server with:', response.data);
+            vm.taskToDo = response.data
+        }).catch(function (error) {
+            alert('unable to get tasks', error);
+            console.log('error with angular request', error);
+        })
+    }
 })

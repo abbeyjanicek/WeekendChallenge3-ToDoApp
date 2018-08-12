@@ -39,6 +39,14 @@ app.post('/tasks', (req, res) => {
     })
 })
 
+//GET
+app.get('/tasks', (req, res) => {
+    console.log('GET /tasks');
+    Tasks.find({}).then((foundNewTasks) => {
+        res.send(foundNewTasks);
+    })
+});
+
 
 
 

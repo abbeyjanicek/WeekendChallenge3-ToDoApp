@@ -22,8 +22,8 @@
                     <input type="text" placeholder="enter new task here" ng-model="tc.taskIn">
                     <select id="whenToSchedule" ng-model="tc.whenToSchedule">
                         <option value="">---please select---</option>
-                        <option value="now">today</option>
-                        <option value="later">future</option>
+                        <option value="true">today</option>
+                        <option value="false">future</option>
                     </select>
                     <button>create!</button>
                 </form>
@@ -39,10 +39,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <input type="checkbox" name="completeTask" value="true">complete task</td>
-                            <td>task goes here</td>
+                        <tr ng-repeat="newTask in tc.taskToDo">
+                            <td><input type="checkbox" name="completeTask" value="true">complete task</td>
+                            <td>{{newTask.task}}</td>
                             <td><button ng-click="tc.deleteTask">delete task</button></td>
                         </tr>
                     </tbody>
