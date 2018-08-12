@@ -51,7 +51,16 @@ CLIENT: ANGULARJS on HTML:
 []  ng-repeat: tr of tbody
 
 CLIENT: JS:
-[]  function: 
+[x]  1. POST req to SERVER: function: send newTask to server
+
+SERVER: JS:
+[?]  1. POST res to CLIENT: return: newTask
+[]  1. POST req to DB: newTask added to taskToDo array
+
+DATABASE: MONGO:
+[]  1. POST res to SERVER: sendStatus(200)
+
+
 
 
 ### Installing
