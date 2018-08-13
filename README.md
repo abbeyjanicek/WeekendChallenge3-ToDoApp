@@ -1,14 +1,10 @@
 # WeekendChallenge3-ToDoApp
 
--Using AngularJS, create a front end experience that allows a user to create a task.
--When the task is created, it should be stored inside of a database (MongoDB)
+
+
 -Whenever a task is created the front end should refresh to show all tasks that need to be completed.
--Each task should have an option to 'Complete' or 'Delete'.
 -When a task is complete, its visual representation should change on the front end (for example, the background of the task container could change from gray to green, as well as the complete option 'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete. ng-class will come in handy!)
 -Whether or not a task is complete should also be stored in the database.
--Deleting a task should remove it both from the Front End as well as the Database.
--Include a README.md with your project (template).
--We would recommend you spend some time thinking about how to approach this problem. Think through all the logic that will be needed prior to writing any code. Think through your Schema for Mongoose and how you will structure your data. Take your time, relax, remember that impostor syndrome is real, and that you are capable of knocking this out of the park!
 
 -Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
 
@@ -22,7 +18,7 @@ List technologies and frameworks here
 
 ## Getting Started
 [x]  Install node/express, spin up server.
-[]  Set up Mongo/Mongoose.
+[x]  Set up Mongo/Mongoose.
 
 CLIENT: HTML:
 [x]  Create a header.
@@ -48,28 +44,33 @@ CLIENT: ANGULARJS on HTML:
 [x]  set up controller
 [x]  ng-submit: form
 [x]  ng-model: input, select
-[]  ng-click: delete buttons
+[x]  ng-click: delete buttons
 []  ng-repeat: tr of tbody
 
 CLIENT: JS:
 [x]  1. POST req to SERVER: function: send newTask to server
 [x]  2. GET req to SERVER: function: get taskToDo array
-[]  3. DELETE req to SERVER: function: deleteTask
+[x]  3. DELETE req to SERVER: function: deleteTask
+[]  4. PUT req to SERVER: function completeTask
 
 SERVER: JS:
 [x]  1. POST res to CLIENT: return: newTask
 [x]  1. POST req to DB: newTask added to taskToDo array 
 [x]  2. GET req to DB: get taskToDo array 
 [x]  2. GET res to CLIENT: taskToDo array 
-[]  3. DELETE req to DB: find task ID and remove
-[]  3. DELETE res to CLIENT: task deleted
+[x]  3. DELETE req to DB: find task ID and remove
+[x]  3. DELETE res to CLIENT: task deleted
+[]  4. PUT req to DB: find task by ID and update
+[]  4. PUT res to CLIENT: task completed
 
 DATABASE: MONGO:
 [x]  1. POST res to SERVER: sendStatus(200)
 [x]  2. GET res to SERVER: send array 
-[] 3. DELETE res to server: sendStatus(200)
+[x]  3. DELETE res to server: array updated with task deleted
+[]  4. PUT res to SERVER: array updated with task completed
 
-
+DEBUG:
+-page needs to be refreshed to show data in table
 
 
 

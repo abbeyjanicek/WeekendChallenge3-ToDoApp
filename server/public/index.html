@@ -39,8 +39,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="newTask in tc.taskToDo">
-                            <td><input type="checkbox" name="completeTask" value="true">complete task</td>
+                        <tr ng-repeat="newTask in tc.taskToDo" ng-class="task.complete ? 'taskCompleted':'taskNotCompleted'">
+                            <td><input type="checkbox" id="completeTask" ng-click="tc.taskCompleted(newTask._id)" ng-checked="newTask.complete">complete task</td>
                             <td>{{newTask.task}}</td>
                             <td><button ng-click="tc.deleteTask(newTask._id)">delete task</button></td>
                         </tr>
@@ -60,7 +60,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="checkbox" name="moveTask" value="true">move task</td>
+                                <input type="checkbox" name="moveTask" value="true" ng-click="tc.taskMoved">move task</td>
                             <td>task goes here</td>
                             <td><button ng-click="tc.deleteTask(newTask._id)">delete task</button></td>
                         </tr>

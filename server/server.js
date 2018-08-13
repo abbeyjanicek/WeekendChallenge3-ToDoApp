@@ -47,6 +47,20 @@ app.get('/tasks', (req, res) => {
     })
 });
 
+//PUT
+app.put('/tasks/:id', (req, res) => {
+    console.log('updated', req.params.id);
+    Tasks.findOne({_id: req.params.id}).then((foundTask) => {
+        console.log(foundTask);
+        foundTask.taskMoved = true;
+        foundTask.save().then((response) => {
+            res.sendStatus(200);
+        }).catch((error) => {
+            res.sendStatus(500);
+        })
+    })
+})
+
 //DELETE
 app.delete('/tasks/:id', (req, res) => {
     Tasks.findByIdAndRemove(req.params.id).then((response) => {

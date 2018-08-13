@@ -16,6 +16,7 @@ toDoApp.controller('TaskController', function ($http) {
             data: newTask
         }).then(function (response) {
             console.log('received the new task', response.data);
+            getTasks();
         }).catch(function (error) {
             alert('unable to add new task')
             console.log(error);
@@ -35,20 +36,32 @@ toDoApp.controller('TaskController', function ($http) {
         })
     }
 
-vm.deleteTask = function (taskId) {
-    $http({
-        method: 'DELETE',
-        url: '/tasks/' + taskId
-    }).then(function(response) {
-        console.log('task deleted');
-        getTasks();        
-    }).catch(function(response) {
-        console.log('task is not deleted', error);
-        alert('task is not deleted', error);
-    })
-}
+    vm.taskCompleted = function (taskId) {
+        $http({
+            method: 'PUT',
+            url: '/tasks/' + taskId
+        }).then(function (response) {
+            getTasks();
+        }).catch(function (response) {
+            console.log('unable to complete task', error);
+            alert('unable to complete task', error);
+        })
+    }
 
-getTasks();
+    vm.deleteTask = function (taskId) {
+        $http({
+            method: 'DELETE',
+            url: '/tasks/' + taskId
+        }).then(function (response) {
+            console.log('task deleted');
+            getTasks();
+        }).catch(function (response) {
+            console.log('task is not deleted', error);
+            alert('task is not deleted', error);
+        })
+    }
+
+    getTasks();
 
 })
 
