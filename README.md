@@ -1,10 +1,6 @@
 # WeekendChallenge3-ToDoApp
 
-
-
--Whenever a task is created the front end should refresh to show all tasks that need to be completed.
 -When a task is complete, its visual representation should change on the front end (for example, the background of the task container could change from gray to green, as well as the complete option 'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete. ng-class will come in handy!)
--Whether or not a task is complete should also be stored in the database.
 
 -Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
 
@@ -45,13 +41,13 @@ CLIENT: ANGULARJS on HTML:
 [x]  ng-submit: form
 [x]  ng-model: input, select
 [x]  ng-click: delete buttons
-[]  ng-repeat: tr of tbody
+[x]  ng-repeat: tr of tbody
 
 CLIENT: JS:
 [x]  1. POST req to SERVER: function: send newTask to server
 [x]  2. GET req to SERVER: function: get taskToDo array
 [x]  3. DELETE req to SERVER: function: deleteTask
-[]  4. PUT req to SERVER: function completeTask
+[x]  4. PUT req to SERVER: function completeTask
 
 SERVER: JS:
 [x]  1. POST res to CLIENT: return: newTask
@@ -60,17 +56,17 @@ SERVER: JS:
 [x]  2. GET res to CLIENT: taskToDo array 
 [x]  3. DELETE req to DB: find task ID and remove
 [x]  3. DELETE res to CLIENT: task deleted
-[]  4. PUT req to DB: find task by ID and update
-[]  4. PUT res to CLIENT: task completed
+[x]  4. PUT req to DB: find task by ID and update
+[x]  4. PUT res to CLIENT: task completed
 
 DATABASE: MONGO:
 [x]  1. POST res to SERVER: sendStatus(200)
 [x]  2. GET res to SERVER: send array 
 [x]  3. DELETE res to server: array updated with task deleted
-[]  4. PUT res to SERVER: array updated with task completed
+[x]  4. PUT res to SERVER: array updated with task completed
 
 DEBUG:
--page needs to be refreshed to show data in table
+
 
 
 
