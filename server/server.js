@@ -28,7 +28,7 @@ mongoose.connection.on('error', (error) => {
 });
 
 //MOVE TO ROUTER NEXT TIME!
-//POST
+//CREATE: POST
 app.post('/tasks', (req, res) => {
     console.log('POST to /tasks req.body:', req.body);
     const taskFromClient = req.body;
@@ -41,7 +41,7 @@ app.post('/tasks', (req, res) => {
     })
 })
 
-//GET
+//READ: GET
 app.get('/tasks', (req, res) => {
     console.log('GET /tasks');
     Tasks.find({}).then((foundNewTasks) => {
@@ -49,12 +49,12 @@ app.get('/tasks', (req, res) => {
     })
 });
 
-//PUT
+//UPDATE: PUT
 app.put('/tasks/:id', (req, res) => {
     console.log('updated', req.params.id);
     Tasks.findOne({_id: req.params.id}).then((foundTask) => {
         console.log(foundTask);
-        foundTask.task_completed = true;
+        foundTask.task_completed = !foundTask.task_completed;
         //foundTask.taskMoved = true;
         foundTask.save().then((response) => {
             res.sendStatus(200);
@@ -64,7 +64,7 @@ app.put('/tasks/:id', (req, res) => {
     })
 })
 
-//DELETE
+//DELETE: DELETE
 app.delete('/tasks/:id', (req, res) => {
     Tasks.findByIdAndRemove(req.params.id).then((response) => {
         res.sendStatus(200);
