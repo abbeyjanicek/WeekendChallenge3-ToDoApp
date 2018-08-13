@@ -1,11 +1,16 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightgray;
+    background-color: lavender;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
 }
 
 .button{
-    background-color: darkgrey;
-    border: 2px solid grey;
+    background-color: #240533;
+    border: 6px black;
     border-radius: 8px;
     color: white;
     padding: 8px 16px;
@@ -15,25 +20,44 @@ body{
 
 .header {
     text-align: center;
-    background-color: red;
+    background-color: #520B73;
     height: 100px;
     vertical-align: middle;
     width: 100%;
+    color: white;
+    border: 8px solid black;
 }
 
+.inputfield {
+    height: 25px;
+    width: 500px;
+    border-radius: 8px;
+    font-size: medium;
+}
+
+.dropdown {
+    height: 32px;
+    width: 300px;
+    font-size: medium;
+}
+
+.buttoncolumn{
+    width: 200px;
+}
 
 .footer{
     text-align: center;
-    background-color: red;
+    background-color: #520B73;
     height: 100px;
     vertical-align: middle;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border: 8px solid black;
 }
 
 .task_completed{
-    background-color: darkgrey
+    background-color: #6D0F99;
 }
 
 table{
@@ -47,12 +71,16 @@ table{
 th {
     border: 1px solid black;
     text-align: center;
+    font-size: 24px;
+    background-color: #520B73;
+    color: white;
 }
 
 tr, td{
-    border: 1px solid black;
+    border: 8px solid black;
     padding: 10px;
     text-align: left;
+    font-size: 18px;
 }
 
 a[href^="mailto:"]{ 

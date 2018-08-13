@@ -19,8 +19,8 @@
         <div class="content">
             <div id="input form">
                 <form ng-submit="tc.sendTask()">
-                    <input type="text" placeholder="enter new task here" ng-model="tc.taskIn">
-                    <select id="whenToSchedule" ng-model="tc.whenToSchedule">
+                    <input type="text" class="inputfield" placeholder="enter new task here" ng-model="tc.taskIn">
+                    <select class="dropdown" id="whenToSchedule" ng-model="tc.whenToSchedule">
                         <option value="">---please select---</option>
                         <option value="true">today</option>
                         <option value="false">future</option>
@@ -30,12 +30,12 @@
             </div>
             <div class="table">
                 <table id="today">
-                    <h3>today</h3>
+                    <h2>today</h2>
                     <thead>
                         <tr>
-                            <th>complete task</th>
+                            <th class="buttoncolumn">complete task</th>
                             <th>task description</th>
-                            <th>delete task</th>
+                            <th class="buttoncolumn">delete task</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,12 +49,12 @@
             </div>
             <div class="table">
                 <table id="future">
-                    <h3>future</h3>
+                    <h2>future</h2>
                     <thead>
                         <tr>
-                            <th>move task</th>
+                            <th class="buttoncolumn">move task</th>
                             <th>task description</th>
-                            <th>delete task</th>
+                            <th class="buttoncolumn">delete task</th>
                         </tr>
                     </thead>
                     <tbody>
