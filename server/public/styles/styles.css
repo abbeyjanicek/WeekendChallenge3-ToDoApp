@@ -4,8 +4,9 @@ body{
 }
 
 .button{
-    background-color: #092133;
-    border: none;
+    background-color: darkgrey;
+    border: 2px solid grey;
+    border-radius: 8px;
     color: white;
     padding: 8px 16px;
     font-size: 16px;
@@ -29,6 +30,10 @@ body{
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.task_completed{
+    background-color: darkgrey
 }
 
 table{
