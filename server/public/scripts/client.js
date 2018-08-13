@@ -4,6 +4,7 @@ toDoApp.controller('TaskController', function ($http) {
     let vm = this;
     vm.taskToDo = [];
 
+    //POST
     vm.sendTask = function () {
         let newTask = {
             task: vm.taskIn,
@@ -23,6 +24,7 @@ toDoApp.controller('TaskController', function ($http) {
         })
     }
 
+    //GET
     function getTasks() {
         $http({
             method: 'GET',
@@ -36,6 +38,7 @@ toDoApp.controller('TaskController', function ($http) {
         })
     }
 
+    //PUT
     vm.taskCompleted = function (taskId) {
         $http({
             method: 'PUT',
@@ -48,6 +51,7 @@ toDoApp.controller('TaskController', function ($http) {
         })
     }
 
+    //DELETE
     vm.deleteTask = function (taskId) {
         $http({
             method: 'DELETE',
