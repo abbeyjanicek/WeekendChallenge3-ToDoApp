@@ -22,6 +22,7 @@ toDoApp.controller('TaskController', function ($http) {
             alert('unable to add new task')
             console.log(error);
         })
+        vm.taskIn = '';
     }
 
     //GET
