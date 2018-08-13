@@ -16,13 +16,13 @@ toDoApp.controller('TaskController', function ($http) {
             url: '/tasks',
             data: newTask
         }).then(function (response) {
-            console.log('received the new task', response.data);
+            console.log('POST/ received the new task: ', response.data);
             getTasks();
+            vm.taskIn = ''; //include in here so it does not clear field if not succcessful
         }).catch(function (error) {
-            alert('unable to add new task')
+            alert('unable to add new task: ', error)
             console.log(error);
         })
-        vm.taskIn = '';
     }
 
     //GET
@@ -31,11 +31,11 @@ toDoApp.controller('TaskController', function ($http) {
             method: 'GET',
             url: '/tasks'
         }).then(function (response) {
-            console.log('back from server with:', response.data);
+            console.log('GET/ back from server with: ', response.data);
             vm.taskToDo = response.data
         }).catch(function (error) {
-            alert('unable to get tasks', error);
-            console.log('error with angular request', error);
+            alert('unable to get tasks: ', error);
+            console.log('error with angular request: ', error);
         })
     }
 
@@ -45,10 +45,11 @@ toDoApp.controller('TaskController', function ($http) {
             method: 'PUT',
             url: '/tasks/' + taskId
         }).then(function (response) {
+            console.log('PUT/ task completed');
             getTasks();
         }).catch(function (response) {
-            console.log('unable to complete task', error);
-            alert('unable to complete task', error);
+            console.log('unable to complete task: ', error);
+            alert('unable to complete task: ', error);
         })
     }
 
@@ -58,11 +59,11 @@ toDoApp.controller('TaskController', function ($http) {
             method: 'DELETE',
             url: '/tasks/' + taskId
         }).then(function (response) {
-            console.log('task deleted');
+            console.log('DELETE/ task deleted');
             getTasks();
         }).catch(function (response) {
-            console.log('task is not deleted', error);
-            alert('task is not deleted', error);
+            console.log('task is not deleted: ', error);
+            alert('task is not deleted: ', error);
         })
     }
 

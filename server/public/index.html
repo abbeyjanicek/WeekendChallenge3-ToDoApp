@@ -25,7 +25,7 @@
                         <option value="true">today</option>
                         <option value="false">future</option>
                     </select>
-                    <button class="button" >create!</button>
+                    <button class="button">create!</button>
                 </form>
             </div>
             <div class="table">
@@ -39,7 +39,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="newTask in tc.taskToDo" ng-class="newTask.task_completed ? 'task_completed':'task_not_completed'">
+                        <tr ng-repeat="newTask in tc.taskToDo" ng-class="newTask.task_completed ? 'task_completed':'task_not_completed'"> <!--ng-class="{complete: newTask.task_completed}" <- "if complete is true, -->
                             <td><input type="checkbox" id="completeTask" ng-click="tc.taskCompleted(newTask._id)" ng-checked="newTask.task_completed">task completed</td>
                             <td>{{newTask.task}}</td>
                             <td><button class="button" ng-click="tc.deleteTask(newTask._id)">delete task</button></td>

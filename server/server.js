@@ -26,6 +26,7 @@ mongoose.connection.on('error', (error) => {
     console.log('did not connect to Mongo', error);
 });
 
+//MOVE TO ROUTER NEXT TIME!
 //POST
 app.post('/tasks', (req, res) => {
     console.log('POST to /tasks req.body:', req.body);
@@ -70,10 +71,7 @@ app.delete('/tasks/:id', (req, res) => {
         res.sendStatus(500)
     });
 })
-
-
-
-
+//END MOVE TO ROUTER NEXT TIME!
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);

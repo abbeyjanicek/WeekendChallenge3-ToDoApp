@@ -1,20 +1,23 @@
 # WeekendChallenge3-ToDoApp
 
--When a task is complete, its visual representation should change on the front end (for example, the background of the task container could change from gray to green, as well as the complete option 'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete. ng-class will come in handy!)
-
--Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
-
-    -Background color of the page
-    -  font family and size
-    -text color &/or background color of tasks to show whether or not they have been completed
+Using AngularJS, create a front end experience that allows a user to create a task.
+When the task is created, it should be stored inside of a database (MongoDB)
+Whenever a task is created the front end should refresh to show all tasks that need to be completed.
+Each task should have an option to 'Complete' or 'Delete'.
+When a task is complete, its visual representation should change on the front end (for example, the background of the task container could change from gray to green, as well as the complete option 'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete. ng-class will come in handy!)
+Whether or not a task is complete should also be stored in the database.
+Deleting a task should remove it both from the Front End as well as the Database.
+Include a README.md with your project (template).
 
 ## Built With
 
-List technologies and frameworks here
+JavaScript
+AngularJS
+MongoDB
+Mongoose
+CSS
 
 ## Getting Started
-[x]  Install node/express, spin up server.
-[x]  Set up Mongo/Mongoose.
 
 CLIENT: HTML:
 [x]  Create a header.
@@ -68,8 +71,6 @@ DATABASE: MONGO:
 DEBUG:
 
 
-
-
 ### Installing
 
 Steps to get the development environment running.
@@ -78,11 +79,12 @@ Steps to get the development environment running.
 2. `npm install`
 3. `npm start`
 
-And so on...
+[x]  Install node/express, spin up server.
+[x]  Set up Mongo/Mongoose.
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+
 
 ### Completed Features
 
