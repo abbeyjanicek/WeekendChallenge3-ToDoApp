@@ -1,5 +1,5 @@
 const express = require('express');
-
+const mongoose = require('./modules/database-connection.js');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;

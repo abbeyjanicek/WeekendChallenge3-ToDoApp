@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/tasks';
 
-const database = require('./modules/database-connection.js');
-
 mongoose.connect(mongoURI, { useNewUrlParser: true });
 
 mongoose.connection.on('open', () => {
