@@ -7,7 +7,7 @@ const mongoURI = 'mongodb://localhost:27017/tasks';
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
-    name: { type: String }
+    task: { type: String }
     //task_completed: { type: Boolean }
 });
 
@@ -47,7 +47,14 @@ app.get('/tasks', (req, res) => {
     })
 });
 
-
+//DELETE
+app.delete('/tasks/:id', (req, res) => {
+    Tasks.findByIdAndRemove(req.params.id).then((response) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        res.sendStatus(500)
+    });
+})
 
 
 

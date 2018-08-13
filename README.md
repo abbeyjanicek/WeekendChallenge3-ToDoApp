@@ -53,17 +53,22 @@ CLIENT: ANGULARJS on HTML:
 
 CLIENT: JS:
 [x]  1. POST req to SERVER: function: send newTask to server
-[-]  2. GET req to SERVER: function: get taskToDo array <------need to debug
+[x]  2. GET req to SERVER: function: get taskToDo array
+[]  3. DELETE req to SERVER: function: deleteTask
 
 SERVER: JS:
 [x]  1. POST res to CLIENT: return: newTask
-[-]  1. POST req to DB: newTask added to taskToDo array <------need to debug: not adding to array
-[-]  2. GET req to DB: get taskToDo array <------need to debug
-[-]  2. GET res to CLIENT: taskToDo array <-----need to debug
+[x]  1. POST req to DB: newTask added to taskToDo array 
+[x]  2. GET req to DB: get taskToDo array 
+[x]  2. GET res to CLIENT: taskToDo array 
+[]  3. DELETE req to DB: find task ID and remove
+[]  3. DELETE res to CLIENT: task deleted
 
 DATABASE: MONGO:
 [x]  1. POST res to SERVER: sendStatus(200)
-[-]  2. GET res to SERVER: send array <-----need to debug
+[x]  2. GET res to SERVER: send array 
+[] 3. DELETE res to server: sendStatus(200)
+
 
 
 

@@ -34,4 +34,29 @@ toDoApp.controller('TaskController', function ($http) {
             console.log('error with angular request', error);
         })
     }
+
+vm.deleteTask = function (taskId) {
+    $http({
+        method: 'DELETE',
+        url: '/tasks/' + taskId
+    }).then(function(response) {
+        console.log('task deleted');
+        getTasks();        
+    }).catch(function(response) {
+        console.log('task is not deleted', error);
+        alert('task is not deleted', error);
+    })
+}
+
+getTasks();
+
 })
+
+
+
+
+
+
+
+
+
