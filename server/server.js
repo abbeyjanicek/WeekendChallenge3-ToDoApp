@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
-const mongoURI = 'mongodb://localhost:27017/tasks';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/tasks';
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
@@ -59,6 +59,7 @@ app.put('/tasks/:id', (req, res) => {
         foundTask.save().then((response) => {
             res.sendStatus(200);
         }).catch((error) => {
+            console.log('ERROR /tasks/:id ', error);
             res.sendStatus(500);
         })
     })
@@ -69,6 +70,7 @@ app.delete('/tasks/:id', (req, res) => {
     Tasks.findByIdAndRemove(req.params.id).then((response) => {
         res.sendStatus(200);
     }).catch((error) => {
+        console.log('ERROR /tasks/:id ', error);
         res.sendStatus(500)
     });
 })

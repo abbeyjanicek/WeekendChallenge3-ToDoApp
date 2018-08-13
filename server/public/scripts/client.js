@@ -59,15 +59,35 @@ toDoApp.controller('TaskController', function ($http) {
         $http({
             method: 'DELETE',
             url: '/tasks/' + taskId
+        }).then(function () {
+            deleteAlert();
         }).then(function (response) {
-            console.log('DELETE/ task deleted');
-            getTasks();
-        }).catch(function (response) {
-            console.log('task is not deleted: ', error);
-            alert('task is not deleted: ', error);
-        })
+                console.log('DELETE/ task deleted');
+                getTasks();
+            }).catch(function (response) {
+                console.log('task is not deleted: ', error);
+                alert('task is not deleted: ', error);
+            })
     }
 
+    function deleteAlert() {
+        swal({
+            title: "are you sure?",
+            text: "once deleted, you will not be able to recover this task!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("your task has been deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("your task is still on your to-do list!");
+                }
+            });
+    }
     getTasks();
 
 })
