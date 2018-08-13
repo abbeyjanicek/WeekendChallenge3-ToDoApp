@@ -8,7 +8,8 @@ const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
     task: { type: String },
-    task_completed: { type: Boolean }
+    task_completed: { type: Boolean },
+    when_to_schedule: { type: Boolean }
 });
 
 const Tasks = mongoose.model('Tasks', TaskSchema);

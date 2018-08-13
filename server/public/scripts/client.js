@@ -8,7 +8,8 @@ toDoApp.controller('TaskController', function ($http) {
     vm.sendTask = function () {
         let newTask = {
             task: vm.taskIn,
-            task_completed: vm.taskCompleted
+            task_completed: vm.taskCompleted,
+            when_to_schedule: vm.whenToSchedule
         }
         console.log(newTask);
         $http({
